@@ -1,6 +1,6 @@
 {
-  "name": "01-exercise-sunglass-shop-in-react",
-  "author": "Developers Institute",
+  "name": "website-for-cms-application",
+  "author": "Ash Magill",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -21,12 +21,6 @@
     "test": "react-scripts test",
     "test:ci": "CI=true npm test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
