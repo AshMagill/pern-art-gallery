@@ -4,7 +4,6 @@ require("dotenv").config();
 //this middleware will continue on if the token is inside the local storage
 module.exports = async (req, res, next) => {
   const token = req.header("token");
-  // set token in cookie
   if (!token) {
     return res.status(403).json("Autherization denied");
   }
