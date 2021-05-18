@@ -1,0 +1,145 @@
+:root {
+  --shadow: 5px 7px 2px #04000d;
+  --border-radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #7846ed url("bg.jpg") top left repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/*navbar*/
+
+.flex-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+.flex-nav ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0 3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.product-grid,
+.product-grid-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-grid-item {
+  background: #fff;
+  padding: 2rem;
+  display: grid;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.product-grid-item img {
+  height: 240px;
+}
+
+.product-grid-item button {
+  display: block;
+  background: #fec401;
+  border-radius: var(--border-radius);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: 300ms background;
+}
+
+.product-grid-item button:hover {
+  cursor: pointer;
+}
+
+.product-grid-item label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.toolbar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filterBy,
+.sortBy {
+  display: inline-block;
+}
+
+label {
+  color: #fff;
+  text-shadow: var(--shadow);
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+select {
+  text-transform: capitalize;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  display: inline-block;
+  min-width: 10rem;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 30rem) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 3rem 0 5rem;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .flex-nav ul li a {
+    font-size: 3rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
