@@ -3,13 +3,13 @@ require("dotenv").config();
 
 //this middleware will continue on if the token is inside the local storage
 module.exports = async (req, res, next) => {
-  const token = req.header("token");
-  if (!token) {
+  const jwtToken = req.header("token");
+  if (!jwtToken) {
     return res.status(403).json("Autherization denied");
   }
   try {
-    const verify = jwt.verify(token, process.env.jwtSecret);
-    req.user = verify.user;
+    const payload = jwt.verify(jwtToken, process.env.jwtSecret);
+    req.user = payload.user;
     next();
   } catch (err) {
     console.error(err.message);

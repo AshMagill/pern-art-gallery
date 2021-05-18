@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const pool = require("../db");
-//const bcrypt = require("bcrypt");
+// add argon2
+const argon2 = require("argon2");
 const jwtGenerator = require("../utils/jwtGenerator");
 const validInfo = require("../middleware/validinfo");
 const autherization = require("../middleware/authorization");
@@ -17,14 +18,13 @@ router.post("/register", validInfo, async (req, res) => {
     if (user.rows.length !== 0) {
       return res.status(401).send("User already exists");
     }
-    //3. bcrypt the password
-
-    //no hashing tool used yet
+    //3. hash the password with argon2
+    const hash = await argon2.hash("password");
 
     //4. enter the user into the database
     const newUser = await pool.query(
       "INSERT INTO users (user_name, user_email, user_password) VALUES($1,$2,$3) RETURNING *",
-      [name, email, password]
+      [name, email, hash]
     );
     //5. generate the jwt token
     const token = jwtGenerator(newUser.rows[0].user_id);
@@ -48,11 +48,16 @@ router.post("/login", validInfo, async (req, res) => {
       return res.status(401).json("Password or email is incorrect");
     }
     //3. check if incoming password is the same as the database password
+
     // add hash later
-    const validPassword = user.rows[0].user_password;
+    const validPassword = await argon2.verify(
+      user.rows[0].user_password,
+      password
+    );
     if (!validPassword) {
       return res.status(401).json("Password or Email is incorrect");
     }
+
     //4. give them the jwt token
     const token = jwtGenerator(user.rows[0].user_id);
 
