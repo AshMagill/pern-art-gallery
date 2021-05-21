@@ -11,14 +11,17 @@ router.post("/register", validInfo, async (req, res) => {
     //1. destructure the req.body (name, email, password)
     const { name, email, password } = req.body;
     //2. check if the user exists (if user exists then throw error)
-    const user = await pool.query("SELECT * FROM users WHERE user_email = $1", [
-      email,
-    ]);
+    const user = await pool.query(
+      "SELECT * FROM users WHERE user_email = $1 AND password = $1",
+      [email, password]
+    );
 
     if (user.rows.length !== 0) {
       return res.status(401).send("User already exists");
     }
     //3. hash the password with argon2
+    // DO NOT remove the hashing feature, in the future I wil make a master password that can add and remove users
+    //this is for business's so they can issue passwords to employees.
     const hash = await argon2.hash("password");
 
     //4. enter the user into the database

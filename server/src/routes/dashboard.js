@@ -19,7 +19,7 @@ router.get("/", authorization, async (req, res) => {
 // all my routes for article crud
 
 // create an article item
-router.post("/articles", async (req, res) => {
+router.post("/articles", authorization, async (req, res) => {
   try {
     const { title, description, image } = req.body;
     const newArticle = await pool.query(
@@ -57,7 +57,7 @@ router.get("/articles/:id", async (req, res) => {
 });
 
 // update an artcle
-router.put("/articles/:id", async (req, res) => {
+router.put("/articles/:id", authorization, async (req, res) => {
   try {
     const { id } = req.params;
     const { title, description, image } = req.body;
@@ -72,7 +72,7 @@ router.put("/articles/:id", async (req, res) => {
 });
 
 // delete an article
-router.delete("/articles/:id", async (req, res) => {
+router.delete("/articles/:id", authorization, async (req, res) => {
   try {
     const { id } = req.params;
     const deleteArticle = await pool.query(
