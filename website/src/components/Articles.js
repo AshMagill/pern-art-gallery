@@ -23,8 +23,8 @@ const Articles = () => {
         {data.map((article) => {
           return (
             <Article
-              image={article.image}
               title={article.title}
+              image={article.image}
               description={article.description}
             />
           );
