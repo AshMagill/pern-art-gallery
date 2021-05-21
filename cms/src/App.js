@@ -10,7 +10,6 @@ import {
 
 // components
 import Dashboard from "./components/Dashboard";
-import Register from "./components/Register";
 import Login from "./components/Login";
 
 function App() {
@@ -21,6 +20,7 @@ function App() {
   };
 
   async function isAuth() {
+    console.log("running isauth");
     try {
       const response = await fetch("http://localhost:5000/auth/is-verify", {
         method: "GET",
@@ -28,8 +28,7 @@ function App() {
       });
 
       const parseRes = await response.json();
-
-      //console.log(parseRes);
+      console.log(parseRes);
       parseRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
     } catch (err) {
       console.error(err.message);
@@ -53,17 +52,6 @@ function App() {
                   <Login {...props} setAuth={setAuth} />
                 ) : (
                   <Redirect to="/dashboard" />
-                )
-              }
-            />
-            <Route
-              exact
-              path="/register"
-              render={(props) =>
-                !isAuthenticated ? (
-                  <Register {...props} setAuth={setAuth} />
-                ) : (
-                  <Redirect to="/" />
                 )
               }
             />

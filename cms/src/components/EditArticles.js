@@ -15,13 +15,15 @@ const EditArticles = ({ item }) => {
         `http://localhost:5000/dashboard/articles/${item.article_id}`,
         {
           method: "PUT",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            token: localStorage.token,
+            "Content-type": "application/json",
+          },
           body: JSON.stringify(body),
         }
       );
 
       window.location = "/dashboard";
-      console.log(response);
     } catch (err) {
       console.error(err.message);
     }
@@ -31,8 +33,8 @@ const EditArticles = ({ item }) => {
       <button
         type="button"
         className="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target={`#id${item.article_id}`}
+        data-toggle="modal"
+        data-target={`#id${item.article_id}`}
       >
         Edit
       </button>
@@ -53,9 +55,11 @@ const EditArticles = ({ item }) => {
               <button
                 type="button"
                 className="btn-close"
-                data-bs-dismiss="modal"
+                data-dismiss="modal"
                 aria-label="Close"
-              ></button>
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div className="modal-body">
               <h5>image</h5>
@@ -91,7 +95,7 @@ const EditArticles = ({ item }) => {
               <button
                 type="button"
                 className="btn btn-danger"
-                data-bs-dismiss="modal"
+                data-dismiss="modal"
                 onClick={() => setDescription(item.description)}
               >
                 Close

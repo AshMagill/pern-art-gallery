@@ -11,9 +11,9 @@ const ListArticles = () => {
         `http://localhost:5000/dashboard/articles/${id}`,
         {
           method: "DELETE",
+          headers: { token: localStorage.token },
         }
       );
-      console.log(res);
 
       setArticle(article.filter((articlea) => articlea.article_id !== id));
     } catch (err) {
@@ -35,17 +35,17 @@ const ListArticles = () => {
       <table className="table mt-5">
         <thead>
           <tr>
-            <th>Image</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Image</th>
           </tr>
         </thead>
         <tbody>
           {article.map((item) => (
             <tr key={item.article_id}>
-              <td>{item.image}</td>
               <td>{item.title}</td>
               <td>{item.description}</td>
+              <td>{item.image}</td>
               <td>
                 <EditArticles item={item} />
               </td>

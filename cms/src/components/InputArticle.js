@@ -8,13 +8,14 @@ const InputArticle = () => {
     e.preventDefault();
     try {
       const body = { title, description, image };
-      //need to find a way to use all
-      //const descriptionText = { description };
-      //const titleText = { title };
 
       const response = await fetch("http://localhost:5000/dashboard/articles", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          token: localStorage.token,
+          "Content-type": "application/json",
+        },
+
         body: JSON.stringify(body),
       });
       window.location = "/dashboard";
