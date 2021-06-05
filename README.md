@@ -30,7 +30,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">PERN Client with CMS and Server</h3>
+  <h3 align="center">PERN Art Gallery</h3>
 
   <p align="center">
     A simple web page for displaying images, it comes with a CMS and a Server that uses basic auth middleware to protect CRUD operations
@@ -79,20 +79,24 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-  <a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM">
-  <p>Link to C4 diagram</p>
-  </a>
-
 A while back I made my brother a simple one pager to showcase his artwork <a href="https://tylarwaterman.co.nz">tylarwaterman.co.nz</a>, 
 it turned out ok, but I have to manually add images to the html whenever he makes new ones.
 
 Im currently working on this PERN stack version of it so he can upload his images via CMS whenever he wants.
 
+  <a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM">
+  <p>Link to C4 diagram</p>
+  </a>
 ### Built With
 
-* []()
-* []()
-* []()
+* [Postgres](https://www.postgresql.org/)
+* [Express](https://expressjs.com/)
+* [React](https://reactjs.org/)
+* [NodeJS](https://nodejs.org/en/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Docker](https://hub.docker.com/_/postgres)
+* [Argon2](https://www.npmjs.com/package/argon2)
+* [JWT](https://jwt.io/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -104,10 +108,10 @@ To get a local copy up and running follow these simple steps.
 * npm 
   https://www.npmjs.com/get-npm
 
-* docker (to run postgres)
+* Docker (to run postgres)
   https://docs.docker.com/engine/install/
 
-* a database manager (I use Beekeeper)
+* A database manager (I use Beekeeper)
   https://docs.beekeeperstudio.io/installation
 
 ### Installation
@@ -205,16 +209,24 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - ashmagillnewzealand@gmail.com
+Ash Magill - ashmagillnewzealand@gmail.com
 
 Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com/AshMagill/pern-art-gallery)
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## Thought leaders and cool orgs
 
-* []()
-* []()
-* []()
+* [The Developers Institute Whangarei](https://www.developers.ac.nz)
+* [Vim](https://www.vim.org)
+* [Arch Linux](https://archlinux.org/)
+* [Larbs](https://github.com/LukeSmithxyz/LARBS)
+* [Ben Awad](https://www.youtube.com/user/99baddawg)
+* [Mental Outlaw](https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA)
+* [Libreboot](https://libreboot.org/)
+* [Free Software Foundation (FSF)](https://www.fsf.org/)
+
+## I made this readme with a template from: 
+* [Othneil Drew](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
