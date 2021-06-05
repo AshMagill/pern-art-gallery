@@ -180,7 +180,7 @@ To get a local copy up and running follow these simple steps.
    ```
 4. In the cms, log in with the user email and password we made earlier
    ```
-   email: user@gmail.com
+   email: email@email.com
    password: password
    ```
 <!-- CONTRIBUTING -->
