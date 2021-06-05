@@ -121,9 +121,10 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-**I'm working on getting docker-compose set up at the moment, but this will work for now.** 
+**I'm working on getting docker-compose set up at the moment, but this will work for now** 
 <br>
-**Also its not a very good idea to share your postgres credentials if your repo is in production**
+
+(Also its not a very good idea to share your postgres credentials if your repo is in production)
 
 1. Clone the repo
    ```sh
@@ -180,7 +181,7 @@ To get a local copy up and running follow these simple steps.
    ```
 2. Individually CD into server, cms, website, and start them
    <br>
-   **you are running two clients, so when npm asks to run the second one in another port, say yes**
+   (you are running two clients, so when npm asks to run the second one in another port, say yes)
    ```sh
    npm start
    ```
