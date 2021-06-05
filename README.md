@@ -95,12 +95,6 @@ where I can make a CMS website that
 is fast to produce while catering to 
 the clients individual needs.
 
-I also like the idea of helping web developers to become self employed, if I could help people achieve that I would be very happy.
-
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`AshMagill`, `React-client-with-CMS-and-Server`, `ashmagillnewzealand@gmail.com`, `React-client-with-CMS-and-Server`, `A React website that displays images posted by a CMS, the routes in the server are secured with basic authentication. Uses a postgres database.`
-
-
 ### Built With
 
 * []()
@@ -116,11 +110,12 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
   ```
+* docker (to run postgres)
+  https://docs.docker.com/engine/install/
 
 ### Installation
 
