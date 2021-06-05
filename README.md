@@ -141,8 +141,9 @@ To get a local copy up and running follow these simple steps.
    -d \
    postgres
    ```
-3. In your database manager:
-   connect to the database with these credentials **never show this information on your own repo if its in production**
+3. In your database manager, connect to the database with these credentials:
+<br>
+**(never show this information on your own repo if its in production!!)**
    <br>
    Connection Type: Postgres
    <br>
@@ -155,7 +156,6 @@ To get a local copy up and running follow these simple steps.
    Password: password
    <br>
    Default Database: postgres
-
 
 6. In your database manager, create the user table and the article table
    ```sh
