@@ -204,7 +204,7 @@ Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/AshMagill/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [contributors-url]: https://github.com/AshMagill/pern-art-gallery/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [forks-url]: https://github.com/AshMagill/pern-art-gallery/network/members
