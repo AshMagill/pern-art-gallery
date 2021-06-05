@@ -164,7 +164,7 @@ To get a local copy up and running follow these simple steps.
    ```
 8. In your database manager, insert a user
    ```
-   INSERT INTO users (user_name, user_email, user_password),
+   INSERT INTO users (user_name, user_email, user_password)
    VALUES('user','email@email.com','password')
    ```
 2. Individually CD into server, cms, website, and start them
