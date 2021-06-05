@@ -214,7 +214,7 @@ Ash Magill - ashmagillnewzealand@gmail.com
 Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com/AshMagill/pern-art-gallery)
 
 <!-- ACKNOWLEDGEMENTS -->
-## Thought leaders and cool orgs
+## Cool People 
 
 * [The Developers Institute Whangarei](https://www.developers.ac.nz)
 * [Vim](https://www.vim.org)
@@ -225,7 +225,7 @@ Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com
 * [Libreboot](https://libreboot.org/)
 * [Free Software Foundation (FSF)](https://www.fsf.org/)
 
-## I made this readme with using an amazing template  
+## My Readme uses this template  
 * [Othneil Drew](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
