@@ -142,8 +142,6 @@ To get a local copy up and running follow these simple steps.
    postgres
    ```
 3. In your database manager, connect to the database with these credentials:
-<br>
-**(never show this information on your own repo if its in production!!)**
    <br>
    Connection Type: Postgres
    <br>
