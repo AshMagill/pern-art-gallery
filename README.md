@@ -221,9 +221,8 @@ Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com
 * [Arch Linux](https://archlinux.org/)
 * [Larbs](https://github.com/LukeSmithxyz/LARBS)
 * [Ben Awad](https://www.youtube.com/user/99baddawg)
-* [Mental Outlaw](https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA)
-* [Libreboot](https://libreboot.org/)
-* [Free Software Foundation (FSF)](https://www.fsf.org/)
+* [coreboot](https://www.coreboot.org/)
+* [Free Software Foundation](https://www.fsf.org/)
 
 ## My Readme uses this template  
 * [Othneil Drew](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
