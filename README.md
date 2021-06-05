@@ -185,7 +185,8 @@ To get a local copy up and running follow these simple steps.
    **you are running two clients, so when npm asks to run the second one in another port, say yes**
    <br>
 3. Start up your browser and look up the localhosts the two clients are on
-   **should be localhost:3000 & localhost:3001**
+   <br>
+   **localhost:3000 & localhost:3001**
    <br>
 4. In the cms, log in with the user email and password we made earlier
    <br>
