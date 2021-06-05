@@ -179,6 +179,7 @@ To get a local copy up and running follow these simple steps.
    VALUES('user','email@email.com','password')
    ```
 2. Individually CD into server, cms, website, and start them
+   <br>
    **you are running two clients, so when npm asks to run the second one in another port, say yes**
    ```sh
    npm start
