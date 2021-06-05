@@ -80,9 +80,7 @@ A while back I made my brother a simple one pager to showcase his artwork, shown
 
 <a href="https://tylarwaterman.co.nz">tylarwaterman.co.nz</a>
 
-Currenty I have to manually add images to his repo whenever he creates new artwork.
-
-Im working on this PERN stack version of it so he can upload his images via CMS whenever he wants. Here is a link to a C4 diagram for a technical overview:
+Currenty I have to manually add images to his repo whenever he creates new artwork. Im working on this PERN stack version of it so he can upload his images via CMS whenever he wants. Here is a link to a C4 diagram for a technical overview:
 
 <a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><p>C4 diagram link</p></a> 
 
