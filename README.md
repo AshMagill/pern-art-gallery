@@ -208,11 +208,11 @@ Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com
 [contributors-url]: https://github.com/AshMagill/pern-art-gallery/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [forks-url]: https://github.com/AshMagill/pern-art-gallery/network/members
-[stars-shield]: https://img.shields.io/github/stars/AshMagill/repo.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [stars-url]: https://github.com/AshMagill/pern-art-gallery/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AshMagill/repo.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [issues-url]: https://github.com/AshMagill/pern-art-gallery/issues
-[license-shield]: https://img.shields.io/github/license/AshMagill/repo.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [license-url]: https://github.com/AshMagill/pern-art-gallery/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/AshMagill
