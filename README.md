@@ -178,19 +178,20 @@ To get a local copy up and running follow these simple steps.
    INSERT INTO users (user_name, user_email, user_password),
    VALUES('user','email@email.com','password')
    ```
-
 2. Individually CD into server, cms, website, and start them
    ```sh
    npm start
    ```
    **you are running two clients, so when npm asks to run the second one in another port, say yes**
    <br>
-   
-3. start up your browser and look up the localhosts the two clients are on
+3. Start up your browser and look up the localhosts the two clients are on
+   **should be localhost:3000 & localhost:3001**
+   <br>
 4. In the cms, log in with the user email and password we made earlier
+   <br>
    **email: user@gmail.com**
    <br>
-   **password:password**
+   **password: password**
 
 <!-- USAGE EXAMPLES -->
 ## Usage
