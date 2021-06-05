@@ -85,8 +85,8 @@
   <p>Link to C4 diagram</p>
   </a>
 
-A while back I made my brother a simple one pager to showcase his artwork <a href="tylarwaterman.co.nz">tylarwaterman.co.nz</a> 
-it turned out ok, but I have to manually add images to the html manually whenever he makes new ones.
+A while back I made my brother a simple one pager to showcase his artwork <a href="tylarwaterman.co.nz">tylarwaterman.co.nz</a>, 
+it turned out ok, but I have to manually add images to the html whenever he makes new ones.
 
 Im currently working on this PERN stack version of it so he can upload his images via CMS whenever he wants.
 
@@ -119,7 +119,7 @@ To get a local copy up and running follow these simple steps.
 **I'm working on getting docker-compose set up at the moment, but this will work for now** 
 <br>
 
-(Also its not a very good idea to share your postgres credentials if your repo is in production)
+(Also its never a good idea to share your postgres credentials on github if your repo is in production)
 
 1. Clone the repo
    ```sh
@@ -190,22 +190,6 @@ To get a local copy up and running follow these simple steps.
    email: user@gmail.com
    password: password
    ```
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/AshMagill/React-client-with-CMS-and-Server/issues) for a list of proposed features (and known issues).
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
