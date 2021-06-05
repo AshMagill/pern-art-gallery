@@ -85,7 +85,7 @@
   <p>Link to C4 diagram</p>
   </a>
 
-A while back I made my brother a simple one pager to showcase his artwork tylarwaterman.co.nz, 
+A while back I made my brother a simple one pager to showcase his artwork tylarwaterman.co.nz 
 it turned out ok, but I have to manually add images to the html manually whenever he makes new ones.
 
 Im currently working on this PERN stack version of it so he can upload his images via CMS whenever he wants.
