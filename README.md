@@ -27,7 +27,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 </span>
@@ -219,5 +218,3 @@ Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com
 [issues-url]: https://github.com/AshMagill/pern-art-gallery/issues
 [license-shield]: https://img.shields.io/github/license/AshMagill/pern-art-gallery.svg?style=for-the-badge
 [license-url]: https://github.com/AshMagill/pern-art-gallery/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/AshMagill
