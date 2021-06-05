@@ -65,8 +65,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -94,8 +92,6 @@ Im currently working on this PERN stack version of it so he can upload his image
 * [NodeJS](https://nodejs.org/en/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Docker](https://hub.docker.com/_/postgres)
-* [Argon2](https://www.npmjs.com/package/argon2)
-* [JWT](https://jwt.io/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
