@@ -76,14 +76,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A while back I made my brother a simple one pager to showcase his artwork <a href="https://tylarwaterman.co.nz">tylarwaterman.co.nz</a>, 
-it turned out ok, but I have to manually add images to the html whenever he makes new ones.
+A while back I made my brother a simple one pager to showcase his artwork, shown here: <a href="https://tylarwaterman.co.nz">tylarwaterman.co.nz</a>. I have to manually add images to the html whenever he makes new ones.
 
 Im currently working on this PERN stack version of it so he can upload his images via CMS whenever he wants.
 
-  <a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM">
-  <p>Link to C4 diagram</p>
-  </a>
+Here is a link to a <a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><p>C4 diagram</p></a> to explain how I'm building it.
 
 ### Built With
 * [Postgres](https://www.postgresql.org/)
