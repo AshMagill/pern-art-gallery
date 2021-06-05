@@ -152,23 +152,23 @@ To get a local copy up and running follow these simple steps.
    ```
 6. In your database manager, create the user table and the article table
    ```sh
-docker run -d \
---name  cms-server\
--p 5432:5432 \
--e POSTGRES_PASSWORD=password \
--v cms-server:/var/lib/postgresql/data \
--d \
-postgres
+   docker run -d \
+   --name  cms-server\
+   -p 5432:5432 \
+   -e POSTGRES_PASSWORD=password \
+   -v cms-server:/var/lib/postgresql/data \
+   -d \
+   postgres
    ```
 and
    ```sh
-docker run -d \
---name  cms-server\
--p 5432:5432 \
--e POSTGRES_PASSWORD=password \
--v cms-server:/var/lib/postgresql/data \
--d \
-postgres
+   docker run -d \
+   --name  cms-server\
+   -p 5432:5432 \
+   -e POSTGRES_PASSWORD=password \
+   -v cms-server:/var/lib/postgresql/data \
+   -d \
+   postgres
    ```
 
 <!-- USAGE EXAMPLES -->
