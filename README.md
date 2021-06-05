@@ -142,19 +142,14 @@ To get a local copy up and running follow these simple steps.
    postgres
    ```
 3. In your database manager, connect to the database with these credentials:
-   <br>
+   ```
    Connection Type: Postgres
-   <br>
    Host: Localhost
-   <br>
    Port: 5432
-   <br>
    User: postgres
-   <br>
    Password: password
-   <br>
    Default Database: postgres
-
+   ```
 6. In your database manager, create the user table and the article table
    ```sh
 docker run -d \
