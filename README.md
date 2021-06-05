@@ -40,8 +40,8 @@
   <p align="center">
     A simple web page for displaying images, it comes with a CMS and a Server that uses basic auth middleware to protect CRUD operations
     <br />
-    <a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><strong>C4 Diagram »</strong></a>
-    <br />
+    <!--<a href="https://raw.githubusercontent.com/AshMagill/Readme/main/images/Pern%20C4%20Diagram.png?token=AQZ3OBXAICRLYNCWHRXRGITAYA4OM"><strong>C4 Diagram »</strong></a>-->
+    <!--<br />-->
     <br />
     <!--<a href="https://github.com/AshMagill/pern-art-gallery">View Demo</a>-->
     <!--·-->
