@@ -110,12 +110,14 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* npm 
+  https://www.npmjs.com/get-npm
+
 * docker (to run postgres)
   https://docs.docker.com/engine/install/
+
+* a database manager (I use Beekeeper)
+  https://docs.beekeeperstudio.io/installation/#mac-installation
 
 ### Installation
 
