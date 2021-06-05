@@ -7,7 +7,7 @@
 ***
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
-*** AshMagill, React-client-with-CMS-and-Server, twitter_handle, ashmagillnewzealand@gmail.com, React-client-with-CMS-and-Server, A React website that displays images posted by a CMS, the routes in the server are secured with basic authentication. Uses a postgres database.
+*** AshMagill, pern-art-gallery, twitter_handle, ashmagillnewzealand@gmail.com, pern-art-gallery, A React website that displays images posted by a CMS, the routes in the server are secured with basic authentication. Uses a postgres database.
 -->
 
 
@@ -27,8 +27,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <br />
 <p align="center">
 
@@ -37,14 +35,14 @@
   <p align="center">
     A simple web page for displaying images, it comes with a CMS and a Server that uses basic auth middleware to protect CRUD operations
     <br />
-    <a href="https://github.com/AshMagill/React-client-with-CMS-and-Server"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AshMagill/pern-art-gallery"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/AshMagill/React-client-with-CMS-and-Server">View Demo</a>
+    <a href="https://github.com/AshMagill/pern-art-gallery">View Demo</a>
     ·
-    <a href="https://github.com/AshMagill/React-client-with-CMS-and-Server/issues">Report Bug</a>
+    <a href="https://github.com/AshMagill/pern-art-gallery/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AshMagill/React-client-with-CMS-and-Server/issues">Request Feature</a>
+    <a href="https://github.com/AshMagill/pern-art-gallery/issues">Request Feature</a>
   </p>
 </p>
 
@@ -96,8 +94,6 @@ Im currently working on this PERN stack version of it so he can upload his image
 * []()
 * []()
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -123,7 +119,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:AshMagill/React-client-with-CMS-and-Server.git
+   git clone git@github.com:AshMagill/pern-art-gallery.git
    ```
 2. Individually CD into server, cms, website, and Install NPM packages 
    ```sh
@@ -201,23 +197,17 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
 
 Your Name - ashmagillnewzealand@gmail.com
 
-Project Link: [https://github.com/AshMagill/React-client-with-CMS-and-Server](https://github.com/AshMagill/repo_name)
-
-
+Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com/AshMagill/pern-art-gallery)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -225,10 +215,6 @@ Project Link: [https://github.com/AshMagill/React-client-with-CMS-and-Server](ht
 * []()
 * []()
 * []()
-
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
