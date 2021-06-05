@@ -85,7 +85,7 @@
   <p>Link to C4 diagram</p>
   </a>
 
-A while back I made my brother a simple one pager to showcase his artwork <a href="tylarwaterman.co.nz">tylarwaterman.co.nz</a>, 
+A while back I made my brother a simple one pager to showcase his artwork <a href="https://tylarwaterman.co.nz">tylarwaterman.co.nz</a>, 
 it turned out ok, but I have to manually add images to the html whenever he makes new ones.
 
 Im currently working on this PERN stack version of it so he can upload his images via CMS whenever he wants.
@@ -119,7 +119,7 @@ To get a local copy up and running follow these simple steps.
 **I'm working on getting docker-compose set up at the moment, but this will work for now** 
 <br>
 
-(Also its never a good idea to share your postgres credentials on github if your repo is in production)
+(Also its never a good idea to share your postgres credentials on github if your repo is being deployed)
 
 1. Clone the repo
    ```sh
