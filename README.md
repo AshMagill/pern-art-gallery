@@ -121,7 +121,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-**I'm working on getting docker-compose set up at the moment, but this will work for now**
+**I'm working on getting docker-compose set up at the moment, but this will work for now.** 
+<br>
+**Also its not a very good idea to share your postgres credentials if your repo is in production**
 
 1. Clone the repo
    ```sh
@@ -141,7 +143,7 @@ To get a local copy up and running follow these simple steps.
    -d \
    postgres
    ```
-3. In your database manager, connect to the database with these credentials:
+3. In your database manager, connect to the database with these credentials
    ```
    Connection Type: Postgres
    Host: Localhost
@@ -150,26 +152,45 @@ To get a local copy up and running follow these simple steps.
    Password: password
    Default Database: postgres
    ```
+7. In your database manager, install uuid-ossp extension
+   ```
+   create extension if not exists "uuid-ossp";
+   ```
 6. In your database manager, create the user table and the article table
    ```sh
-   docker run -d \
-   --name  cms-server\
-   -p 5432:5432 \
-   -e POSTGRES_PASSWORD=password \
-   -v cms-server:/var/lib/postgresql/data \
-   -d \
-   postgres
+   CREATE TABLE users (
+   user_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+   user_name VARCHAR(255) NOT NULL,
+   user_email VARCHAR(255) NOT NULL,
+   user_password VARCHAR(255) NOT NULL
+   );
    ```
-and
    ```sh
-   docker run -d \
-   --name  cms-server\
-   -p 5432:5432 \
-   -e POSTGRES_PASSWORD=password \
-   -v cms-server:/var/lib/postgresql/data \
-   -d \
-   postgres
+   CREATE table articles(
+   article_id SERIAL PRIMARY KEY, 
+   title VARCHAR(255),
+   description VARCHAR(255),
+   image VARCHAR(255)
+   )
    ```
+8. In your database manager, insert a user
+   ```
+   INSERT INTO users (user_name, user_email, user_password),
+   VALUES('user','email@email.com','password')
+   ```
+
+2. Individually CD into server, cms, website, and start them
+   ```sh
+   npm start
+   ```
+   **you are running two clients, so when npm asks to run the second one in another port, say yes**
+   <br>
+   
+3. start up your browser and look up the localhosts the two clients are on
+4. In the cms, log in with the user email and password we made earlier
+   **email: user@gmail.com**
+   <br>
+   **password:password**
 
 <!-- USAGE EXAMPLES -->
 ## Usage
