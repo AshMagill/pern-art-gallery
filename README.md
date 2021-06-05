@@ -70,7 +70,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -212,20 +211,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Ash Magill - ashmagillnewzealand@gmail.com
 
 Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com/AshMagill/pern-art-gallery)
-
-<!-- ACKNOWLEDGEMENTS -->
-## Cool People 
-
-* [The Developers Institute Whangarei](https://www.developers.ac.nz)
-* [Vim](https://www.vim.org)
-* [Arch Linux](https://archlinux.org/)
-* [Larbs](https://github.com/LukeSmithxyz/LARBS)
-* [Ben Awad](https://www.youtube.com/user/99baddawg)
-* [coreboot](https://www.coreboot.org/)
-* [Free Software Foundation](https://www.fsf.org/)
-
-## My Readme uses this template  
-* [Othneil Drew](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
