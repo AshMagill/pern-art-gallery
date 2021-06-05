@@ -163,7 +163,7 @@ To get a local copy up and running follow these simple steps.
    user_name VARCHAR(255) NOT NULL,
    user_email VARCHAR(255) NOT NULL,
    user_password VARCHAR(255) NOT NULL
-   );
+   )
    ```
    ```sh
    CREATE table articles(
@@ -183,17 +183,16 @@ To get a local copy up and running follow these simple steps.
    npm start
    ```
    **you are running two clients, so when npm asks to run the second one in another port, say yes**
-   <br>
 3. Start up your browser and look up the localhosts the two clients are on
-   <br>
-   **localhost:3000 & localhost:3001**
-   <br>
+   ```
+   localhost:3000
+   localhost:3001
+   ```
 4. In the cms, log in with the user email and password we made earlier
-   <br>
-   **email: user@gmail.com**
-   <br>
-   **password: password**
-
+   ```
+   email: user@gmail.com
+   password: password
+   ```
 <!-- USAGE EXAMPLES -->
 ## Usage
 
