@@ -85,15 +85,10 @@
   <p>Link to C4 diagram</p>
   </a>
 
-Small businesses would perfer to use
-template websites (like Wix) because they are 
-cheap and offer CMS like capabilities.
+A while back I made my brother a simple one pager to showcase his artwork tylarwaterman.co.nz, 
+it turned out ok, but I have to manually add images to the html manually whenever he makes new ones.
 
-By developing a reusable template, I 
-can become familiar with it to a point
-where I can make a CMS website that
-is fast to produce while catering to 
-the clients individual needs.
+Im currently working on this PERN stack version of it so he can upload his images via CMS whenever he wants.
 
 ### Built With
 
