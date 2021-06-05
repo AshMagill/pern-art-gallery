@@ -53,11 +53,11 @@ router.post("/login", validInfo, async (req, res) => {
     //3. check if incoming password is the same as the database password
 
     // add hash later
-    const validPassword = await argon2.verify(
-      user.rows[0].user_password,
-      password
-    );
-    if (!validPassword) {
+    //const validPassword = await argon2.verify(
+    //user.rows[0].user_password,
+    //password
+    //);
+    if (!password) {
       return res.status(401).json("Password or Email is incorrect");
     }
 
