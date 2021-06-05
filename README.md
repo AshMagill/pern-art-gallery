@@ -225,7 +225,7 @@ Project Link: [https://github.com/AshMagill/pern-art-gallery](https://github.com
 * [Libreboot](https://libreboot.org/)
 * [Free Software Foundation (FSF)](https://www.fsf.org/)
 
-## I made this readme with a template from: 
+## I made this readme with using an amazing template  
 * [Othneil Drew](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
