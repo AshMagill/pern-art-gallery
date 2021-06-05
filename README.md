@@ -117,20 +117,66 @@ To get a local copy up and running follow these simple steps.
   https://docs.docker.com/engine/install/
 
 * a database manager (I use Beekeeper)
-  https://docs.beekeeperstudio.io/installation/#mac-installation
+  https://docs.beekeeperstudio.io/installation
 
 ### Installation
 
+**I'm working on getting docker-compose set up at the moment, but this will work for now**
+
 1. Clone the repo
    ```sh
-   git clone https://github.com/AshMagill/React-client-with-CMS-and-Server.git
+   git clone git@github.com:AshMagill/React-client-with-CMS-and-Server.git
    ```
-2. Install NPM packages
+2. Individually CD into server, cms, website, and Install NPM packages 
    ```sh
    npm install
    ```
+3. Spin up postgres with docker using your terminal
+   ```sh
+docker run -d \
+--name  cms-server\
+-p 5432:5432 \
+-e POSTGRES_PASSWORD=password \
+-v cms-server:/var/lib/postgresql/data \
+-d \
+postgres
+   ```
+3. In your database manager:
+   connect to the database with these credentials **never show this information on your own repo if its in production**
+   <br>
+   Connection Type: Postgres
+   <br>
+   Host: Localhost
+   <br>
+   Port: 5432
+   <br>
+   User: postgres
+   <br>
+   Password: password
+   <br>
+   Default Database: postgres
 
 
+6. In your database manager, create the user table and the article table
+   ```sh
+docker run -d \
+--name  cms-server\
+-p 5432:5432 \
+-e POSTGRES_PASSWORD=password \
+-v cms-server:/var/lib/postgresql/data \
+-d \
+postgres
+   ```
+and
+   ```sh
+docker run -d \
+--name  cms-server\
+-p 5432:5432 \
+-e POSTGRES_PASSWORD=password \
+-v cms-server:/var/lib/postgresql/data \
+-d \
+postgres
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
