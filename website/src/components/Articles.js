@@ -24,7 +24,7 @@ const Articles = () => {
           return (
             <Article
               title={article.title}
-              image={article.image}
+              filename={article.filename}
               description={article.description}
             />
           );

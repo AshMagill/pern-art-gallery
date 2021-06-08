@@ -1,7 +1,22 @@
 const router = require("express").Router();
 const pool = require("../db");
 const authorization = require("../middleware/authorization");
+const path = require("path");
+const multer = require("multer");
 
+// Create multer object
+const imageUpload = multer({
+  storage: multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "images/");
+    },
+    filename: function (req, file, cb) {
+      cb(null, new Date().valueOf() + "_" + file.originalname);
+    },
+  }),
+});
+
+// get user info (once logged in)
 router.get("/", authorization, async (req, res) => {
   try {
     // all user info is being returned, should not include password
@@ -16,9 +31,9 @@ router.get("/", authorization, async (req, res) => {
   }
 });
 
-// all my routes for article crud
+//article crud
 
-// create an article item
+// create an article
 router.post("/articles", authorization, async (req, res) => {
   try {
     const { title, description, image } = req.body;
@@ -32,24 +47,23 @@ router.post("/articles", authorization, async (req, res) => {
   }
 });
 
-// get all articles
+// get all image data
 router.get("/articles", async (req, res) => {
   try {
-    const allArticles = await pool.query("SELECT * FROM articles");
+    const allArticles = await pool.query("SELECT * FROM images");
     res.json(allArticles.rows);
   } catch (err) {
     console.error(err.message);
   }
 });
 
-// get an artcle item
+// get an image object
 router.get("/articles/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const article = await pool.query(
-      "SELECT * FROM articles WHERE article_id = $1",
-      [id]
-    );
+    const article = await pool.query("SELECT * FROM images WHERE id = $1", [
+      id,
+    ]);
     res.json(article.rows[0]);
   } catch (err) {
     console.error(err.message);
@@ -80,6 +94,41 @@ router.delete("/articles/:id", authorization, async (req, res) => {
       [id]
     );
     res.json("Article item was deleted!");
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+// create an image
+router.post("/image", imageUpload.single("image"), async (req, res) => {
+  try {
+    const { filename, mimetype, size } = req.file;
+    const { title, description } = req.body;
+    const filepath = req.file.path;
+    const newImage = await pool.query(
+      "INSERT INTO images (filename,filepath,mimetype,size,title,description) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
+      [filename, filepath, mimetype, size, title, description]
+    );
+    res.json(newImage.rows[0]);
+  } catch (err) {
+    console.log(err.message);
+  }
+});
+
+//get image by filename
+router.get("/image/:filename", async (req, res) => {
+  try {
+    const { filename } = req.params;
+    const images = await pool.query(
+      "SELECT * FROM images WHERE filename = $1",
+      [filename]
+    );
+    if (images.rows[0]) {
+      const dirname = path.resolve();
+      const fullfilepath = path.join(dirname, images.rows[0].filepath);
+      return res.type(images.rows[0].mimetype).sendFile(fullfilepath);
+    }
+    res.json(images.rows[0]);
   } catch (err) {
     console.error(err.message);
   }
