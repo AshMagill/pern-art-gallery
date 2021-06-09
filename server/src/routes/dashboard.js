@@ -70,29 +70,13 @@ router.get("/articles/:id", async (req, res) => {
   }
 });
 
-// update an artcle
-router.put("/articles/:id", authorization, async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { title, description, image } = req.body;
-    const updateArticle = await pool.query(
-      "UPDATE articles SET title = $1, description = $2, image = $3 WHERE article_id= $4",
-      [title, description, image, id]
-    );
-    res.json("Article was updated!");
-  } catch (err) {
-    console.error(err.message);
-  }
-});
-
 // delete an article
 router.delete("/articles/:id", authorization, async (req, res) => {
   try {
     const { id } = req.params;
-    const deleteArticle = await pool.query(
-      "DELETE FROM articles WHERE article_id = $1",
-      [id]
-    );
+    const deleteArticle = await pool.query("DELETE FROM images WHERE id = $1", [
+      id,
+    ]);
     res.json("Article item was deleted!");
   } catch (err) {
     console.error(err.message);
@@ -100,7 +84,7 @@ router.delete("/articles/:id", authorization, async (req, res) => {
 });
 
 // create an image
-router.post("/image", imageUpload.single("image"), async (req, res) => {
+router.post("/image", imageUpload.single("file"), async (req, res) => {
   try {
     const { filename, mimetype, size } = req.file;
     const { title, description } = req.body;

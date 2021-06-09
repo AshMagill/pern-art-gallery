@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const App = () => {
   return (
     <Router>
+      <h1>My Website</h1>
       <div>
         <header className="App-header container toolbar">
           <nav class="flex-nav">
@@ -31,10 +32,10 @@ const App = () => {
             <Articles />
           </Route>
           <Route exact path="/about">
-            <h1>hi</h1>
+            <h1>About Me (in progress)</h1>
           </Route>
           <Route exact path="/contact">
-            <h1>hi</h1>
+            <h1>Contact Me (in progress)</h1>
           </Route>
         </Switch>
       </div>

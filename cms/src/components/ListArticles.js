@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from "react";
-import EditArticles from "./EditArticles";
 
 const ListArticles = () => {
   const [article, setArticle] = useState([]);
@@ -45,14 +44,18 @@ const ListArticles = () => {
             <tr key={item.article_id}>
               <td>{item.title}</td>
               <td>{item.description}</td>
-              <td>{item.image}</td>
-              <td>
-                <EditArticles item={item} />
-              </td>
+              <img
+                height="80rem"
+                width="80rem"
+                src={`http://localhost:5000/dashboard/image/${item.filename}`}
+                alt={item.title}
+              />
               <td>
                 <button
                   className="btn btn-danger"
-                  onClick={() => deleteArticle(item.article_id)}
+                  onClick={() =>
+                    deleteArticle(item.id) && window.location.reload()
+                  }
                 >
                   Delete
                 </button>

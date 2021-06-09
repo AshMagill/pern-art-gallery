@@ -18,7 +18,7 @@ const Articles = () => {
 
   return (
     <div className="container">
-      <h1>Articles</h1>
+      <h1>My Images</h1>
       <ul className="product-grid">
         {data.map((article) => {
           return (
