@@ -76,7 +76,7 @@ img {
   background-color: red;
   padding: 0;
   border-radius: 50%;
-  border: 0.3rem solid #fff;
+  /*border: 0.3rem solid #fff;*/
   margin-bottom: 4rem;
 }
 
