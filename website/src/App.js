@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const App = () => {
   return (
     <Router>
-      <h1>My Website</h1>
       <div>
         <header className="App-header container toolbar">
           <nav class="flex-nav">
@@ -32,12 +31,35 @@ const App = () => {
             <Articles />
           </Route>
           <Route exact path="/about">
-            <h1>About Me (in progress)</h1>
+            <h1>Tylar Waterman About</h1>
+            <div className="container">
+              <div className="circle"></div>
+              <p className="text">
+                Elit corporis aspernatur dolor recusandae dicta! Corporis eaque
+                et pariatur ea voluptatibus. Dolorum nesciunt sapiente dolorem
+                eos consequatur reiciendis unde Quas aut non pariatur ut dolorum
+                Eaque facilis libero placeat aut deserunt? Quasi mollitia nemo
+                odio id hic Doloremque incidunt odit blanditiis voluptatum nisi.
+                Optio repellendus dolores minima quod
+              </p>
+            </div>
           </Route>
           <Route exact path="/contact">
-            <h1>Contact Me (in progress)</h1>
+            <h1>Tylar Waterman Contact</h1>
+            <div class="container">
+              <p class="text">
+                Lorem elit accusamus natus iusto nulla! Id delectus soluta non
+                quasi velit. Optio minus minima maxime velit ab? Facere iusto
+                itaque corporis laborum fuga Nulla qui praesentium vitae fugiat
+                inventore Quo perspiciatis repellendus mollitia rem animi. Non
+                maxime adipisci voluptatem.
+              </p>
+            </div>
           </Route>
         </Switch>
+        <div class="footer">
+          <div className="square"></div>
+        </div>
       </div>
     </Router>
   );
