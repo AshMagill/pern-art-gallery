@@ -58,7 +58,8 @@ const App = () => {
           </Route>
         </Switch>
         <div class="footer">
-          <div className="square"></div>
+          <div className="insta-logo"></div>
+          <div className="youtube-logo"></div>
         </div>
       </div>
     </Router>
