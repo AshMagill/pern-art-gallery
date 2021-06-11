@@ -31,7 +31,8 @@ const ListArticles = () => {
   }, []);
   return (
     <Fragment>
-      <table className="table mt-5">
+      <h2 className="text-center">Images</h2>
+      <table className="table-striped w-100 mt-5">
         <thead>
           <tr>
             <th>Title</th>
@@ -42,9 +43,10 @@ const ListArticles = () => {
         <tbody>
           {article.map((item) => (
             <tr key={item.article_id}>
-              <td>{item.title}</td>
+              <td className="pl-2">{item.title}</td>
               <td>{item.description}</td>
               <img
+                className="p-1"
                 height="80rem"
                 width="80rem"
                 src={`http://localhost:5000/dashboard/image/${item.filename}`}

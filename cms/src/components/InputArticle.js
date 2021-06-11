@@ -11,7 +11,9 @@ const InputArticle = () => {
     data.append("file", file);
     data.append("description", description);
 
-    Axios.post("http://localhost:5000/dashboard/image", data)
+    Axios.post("http://localhost:5000/dashboard/image", data, {
+      headers: { token: localStorage.token },
+    })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     window.location = "/";
@@ -19,10 +21,12 @@ const InputArticle = () => {
 
   return (
     <div>
+      <h3 className="text-center mt-5">Create Image</h3>
       <form action="#">
         <div className="flex">
           <label htmlFor="title">Title</label>
           <input
+            className="form-control"
             type="text"
             id="title"
             onChange={(event) => {
@@ -34,6 +38,7 @@ const InputArticle = () => {
         <div className="flex">
           <label htmlFor="description">Description</label>
           <input
+            className="form-control"
             type="text"
             id="description"
             onChange={(event) => {
@@ -45,6 +50,7 @@ const InputArticle = () => {
         <div className="flex">
           <label htmlFor="file">File</label>
           <input
+            className="form-control"
             type="file"
             id="file"
             accept=".jpg, .jpeg, .png"
@@ -55,7 +61,9 @@ const InputArticle = () => {
           />
         </div>
       </form>
-      <button onClick={send}>Send</button>
+      <button className="btn btn-success mt-4" onClick={send}>
+        Send
+      </button>
     </div>
   );
 };

@@ -16,7 +16,8 @@ body {
 .container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /*navbar*/
@@ -42,7 +43,6 @@ h1 {
   color: #fff;
   font-size: 3rem;
   text-align: center;
-  margin: 1rem 0 3rem;
 }
 
 img {
@@ -121,6 +121,9 @@ img {
 .product-grid {
   display: grid;
   grid-gap: 2rem;
+}
+
+.profile {
 }
 
 .product-grid,

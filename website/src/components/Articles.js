@@ -18,7 +18,7 @@ const Articles = () => {
 
   return (
     <div className="container">
-      <h1>My Images</h1>
+      <h1>Tylar Waterman Artworks</h1>
       <ul className="product-grid">
         {data.map((article) => {
           return (

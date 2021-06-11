@@ -6,14 +6,15 @@ const jwtGenerator = require("../utils/jwtGenerator");
 const validInfo = require("../middleware/validinfo");
 const autherization = require("../middleware/authorization");
 //register
+
 router.post("/register", validInfo, async (req, res) => {
   try {
     //1. destructure the req.body (name, email, password)
     const { name, email, password } = req.body;
     //2. check if the user exists (if user exists then throw error)
     const user = await pool.query(
-      "SELECT * FROM users WHERE user_email = $1 AND password = $1",
-      [email, password]
+      "SELECT * FROM users WHERE user_email = $1 ",
+      [email]
     );
 
     if (user.rows.length !== 0) {
@@ -22,7 +23,7 @@ router.post("/register", validInfo, async (req, res) => {
     //3. hash the password with argon2
     // DO NOT remove the hashing feature, in the future I wil make a master password that can add and remove users
     //this is for business's so they can issue passwords to employees.
-    const hash = await argon2.hash("password");
+    const hash = await argon2.hash(password);
 
     //4. enter the user into the database
     const newUser = await pool.query(
@@ -53,11 +54,11 @@ router.post("/login", validInfo, async (req, res) => {
     //3. check if incoming password is the same as the database password
 
     // add hash later
-    //const validPassword = await argon2.verify(
-    //user.rows[0].user_password,
-    //password
-    //);
-    if (!password) {
+    const validPassword = await argon2.verify(
+      user.rows[0].user_password,
+      password
+    );
+    if (!validPassword) {
       return res.status(401).json("Password or Email is incorrect");
     }
 
@@ -71,6 +72,7 @@ router.post("/login", validInfo, async (req, res) => {
   }
 });
 
+//bypass login if token exists
 router.get("/is-verify", autherization, async (req, res) => {
   try {
     res.json(true);

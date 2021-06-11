@@ -31,21 +31,7 @@ router.get("/", authorization, async (req, res) => {
   }
 });
 
-//article crud
-
-// create an article
-router.post("/articles", authorization, async (req, res) => {
-  try {
-    const { title, description, image } = req.body;
-    const newArticle = await pool.query(
-      "INSERT INTO articles (title, description, image) VALUES($1, $2, $3) RETURNING *",
-      [title, description, image]
-    );
-    res.json(newArticle.rows[0]);
-  } catch (err) {
-    console.error(err);
-  }
-});
+//image crud
 
 // get all image data
 router.get("/articles", async (req, res) => {
@@ -70,7 +56,7 @@ router.get("/articles/:id", async (req, res) => {
   }
 });
 
-// delete an article
+// delete an image
 router.delete("/articles/:id", authorization, async (req, res) => {
   try {
     const { id } = req.params;
@@ -84,20 +70,25 @@ router.delete("/articles/:id", authorization, async (req, res) => {
 });
 
 // create an image
-router.post("/image", imageUpload.single("file"), async (req, res) => {
-  try {
-    const { filename, mimetype, size } = req.file;
-    const { title, description } = req.body;
-    const filepath = req.file.path;
-    const newImage = await pool.query(
-      "INSERT INTO images (filename,filepath,mimetype,size,title,description) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
-      [filename, filepath, mimetype, size, title, description]
-    );
-    res.json(newImage.rows[0]);
-  } catch (err) {
-    console.log(err.message);
+router.post(
+  "/image",
+  imageUpload.single("file"),
+  authorization,
+  async (req, res) => {
+    try {
+      const { filename, mimetype, size } = req.file;
+      const { title, description } = req.body;
+      const filepath = req.file.path;
+      const newImage = await pool.query(
+        "INSERT INTO images (filename,filepath,mimetype,size,title,description) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
+        [filename, filepath, mimetype, size, title, description]
+      );
+      res.json(newImage.rows[0]);
+    } catch (err) {
+      console.log(err.message);
+    }
   }
-});
+);
 
 //get image by filename
 router.get("/image/:filename", async (req, res) => {
