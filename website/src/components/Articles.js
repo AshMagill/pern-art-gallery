@@ -18,13 +18,13 @@ const Articles = () => {
 
   return (
     <div className="container">
-      <h1>Articles</h1>
+      <h1>Tylar Waterman Artworks</h1>
       <ul className="product-grid">
         {data.map((article) => {
           return (
             <Article
               title={article.title}
-              image={article.image}
+              filename={article.filename}
               description={article.description}
             />
           );

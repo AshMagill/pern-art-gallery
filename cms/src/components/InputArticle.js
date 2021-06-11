@@ -1,59 +1,70 @@
-import React, { Fragment, useState } from "react";
-
+import React, { useState } from "react";
+import Axios from "axios";
 const InputArticle = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const onSubmitForm = async (e) => {
-    e.preventDefault();
-    try {
-      const body = { title, description, image };
+  const [file, setFile] = useState();
+  const [title, setTitle] = useState();
+  const [description, setDescription] = useState();
 
-      const response = await fetch("http://localhost:5000/dashboard/articles", {
-        method: "POST",
-        headers: {
-          token: localStorage.token,
-          "Content-type": "application/json",
-        },
+  const send = (event) => {
+    const data = new FormData();
+    data.append("title", title);
+    data.append("file", file);
+    data.append("description", description);
 
-        body: JSON.stringify(body),
-      });
-      window.location = "/dashboard";
-      console.log(response);
-    } catch (err) {
-      console.error(err.message);
-    }
+    Axios.post("http://localhost:5000/dashboard/image", data, {
+      headers: { token: localStorage.token },
+    })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+    window.location = "/";
   };
 
   return (
-    <Fragment>
-      <h1 className="text-center my-5">Input Article</h1>
-      <form className="d-flex form " onSubmit={onSubmitForm}>
-        <input
-          className="form-control form-input "
-          type="text"
-          placeholder="add title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <input
-          className="form-control"
-          type="text"
-          placeholder="add description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-
-        <input
-          className="form-control ml-3"
-          type="text"
-          placeholder="add image"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-        <button className="btn btn-success">Add</button>
+    <div>
+      <h3 className="text-center mt-5">Create Image</h3>
+      <form action="#">
+        <div className="flex">
+          <label htmlFor="title">Title</label>
+          <input
+            className="form-control"
+            type="text"
+            id="title"
+            onChange={(event) => {
+              const { value } = event.target;
+              setTitle(value);
+            }}
+          />
+        </div>
+        <div className="flex">
+          <label htmlFor="description">Description</label>
+          <input
+            className="form-control"
+            type="text"
+            id="description"
+            onChange={(event) => {
+              const { value } = event.target;
+              setDescription(value);
+            }}
+          />
+        </div>
+        <div className="flex">
+          <label htmlFor="file">File</label>
+          <input
+            className="form-control"
+            type="file"
+            id="file"
+            accept=".jpg, .jpeg, .png"
+            onChange={(event) => {
+              const file = event.target.files[0];
+              setFile(file);
+            }}
+          />
+        </div>
       </form>
-    </Fragment>
+      <button className="btn btn-success mt-4" onClick={send}>
+        Send
+      </button>
+    </div>
   );
 };
 

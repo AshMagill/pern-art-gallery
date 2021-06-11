@@ -155,17 +155,20 @@ To get a local copy up and running follow these simple steps.
    )
    ```
    ```sh
-   CREATE table articles(
-   article_id SERIAL PRIMARY KEY, 
+   CREATE table images(
+   id SERIAL NOT NULL PRIMARY KEY,
    title VARCHAR(255),
    description VARCHAR(255),
-   image VARCHAR(255)
+   filename TEXT UNIQUE,
+   filepath TEXT,
+   mimetype TEXT,
+   size BIGINT
    )
    ```
 8. In your database manager, insert a user
    ```
    INSERT INTO users (user_name, user_email, user_password)
-   VALUES('user','email@email.com','password')
+   VALUES('user','user@email.com','$argon2i$v=19$m=4096,t=3,p=1$DDy+ddirjxRcDR46CUcVyg$axkNtlqYQSmfUiaUDGQbEK6Mn6AsqOGEKeL8TBpQ23U')
    ```
 2. Individually CD into server, cms, website, and start them
    <br>

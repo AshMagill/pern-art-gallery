@@ -41,10 +41,13 @@ const Dashboard = ({ setAuth }) => {
   return (
     <Fragment>
       <div className="container">
-        <h1>{name}'s Dashboard</h1>
+        <h1 className="text-center mt-4">Dashboard</h1>
         <Articles />
       </div>
-      <button className="btn btn-primary" onClick={(e) => logout(e)}>
+      <button
+        className="btn btn-primary mt-4 mb-4 ml-3 "
+        onClick={(e) => logout(e)}
+      >
         Logout
       </button>
     </Fragment>
